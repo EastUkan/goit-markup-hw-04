@@ -108,6 +108,7 @@ p {
 
 .header-contact-address {
 	display: inline-flex;
+	align-items: center;
 }
 
 .header-contact {
@@ -130,21 +131,15 @@ p {
 
 	color: var(--primary-text-color);
 }
-
-.contact-address::before {
-	content: "";
+.header-contact-address {
+}
+.icon-address-header {
 	margin-right: 10px;
 	height: 15px;
 	width: 20px;
-
-	background-repeat: no-repeat;
-	background-position: center;
 }
-.icon-envelop::before {
-	background-image: url("../images/envelope.svg");
-}
-.icon-phone::before {
-	background-image: url("../images/phone.svg");
+.icon-address-header:hover {
+	fill: var(--accent-color);
 }
 .contact-address:hover,
 .contact-address:focus {
@@ -231,27 +226,20 @@ p {
 	margin-left: 30px;
 }
 
-.benefits-list-item::before {
-	content: "";
-	display: block;
+.benefits-icon-box {
+	display: flex;
 	height: 120px;
 	background-color: #f5f4fa;
-	background-position: center;
-	background-repeat: no-repeat;
+	justify-content: center;
+	align-items: center;
 	border-radius: 4px;
 	margin-bottom: 30px;
 }
-.icon-antenna::before {
-	background-image: url("../images/antenna.svg");
-}
-.icon-clock::before {
-	background-image: url("../images/clock.svg");
-}
-.icon-diagram::before {
-	background-image: url("../images/diagram.svg");
-}
-.icon-astronaut::before {
-	background-image: url("../images/astronaut.svg");
+.icon-benefits {
+	height: 70px;
+	width: 70px;
+	justify-content: center;
+	align-items: center;
 }
 
 .benefits-list-item .title {
@@ -365,12 +353,34 @@ p {
 	text-decoration: none;
 
 	color: var(--primary-text-color);
+	display: flex;
+	text-decoration: none;
+	height: 44px;
+	width: 44px;
+	margin-top: 16px;
+
+	border-radius: 50%;
+
+	justify-content: center;
+	align-items: center;
+}
+.socials-item {
+	margin-bottom: 24px;
+}
+.socials-item + .socials-item {
+	margin-left: 10px;
 }
 
 .socials-item-link:hover,
 .socials-item-link:focus {
-	color: var(--primary-white-color);
 	background-color: var(--accent-color);
+}
+.icon-socials-team {
+	height: 20px;
+	fill: var(--primary-text-color);
+}
+.icon-socials-team:hover {
+	fill: var(--primary-white-color);
 }
 
 /* Клиенты */
@@ -401,11 +411,23 @@ p {
 	margin-left: 30px;
 }
 
+.clients-list-item:hover {
+	border: 1px solid var(--accent-color);
+}
+
+.icon-clients {
+	fill: #afb1b8;
+}
+.icon-clients:hover {
+	fill: var(--accent-color);
+}
+
 /* футтер */
 
 .footer {
 	background: #2f303a;
-	padding-top: 45px;
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 .footer-address-conteiner {
 	display: flex;
@@ -427,9 +449,7 @@ p {
 	color: var(--primary-white-color);
 }
 /* адресс */
-.footer-address {
-	padding-bottom: 28px;
-}
+
 .footer-address-list > li:not(:last-child) {
 	margin-bottom: 9px;
 }
@@ -479,24 +499,16 @@ p {
 	margin-top: 20px;
 	border-radius: 50%;
 	background-color: #8b8ea7;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-.footer-icon-instagram {
-	background-image: url("../images/instagram-2.svg");
-}
-.footer-icon-twitter {
-	background-image: url("../images/twitter-2.svg");
-}
-.footer-icon-facebook {
-	background-image: url("../images/Facebook-2.svg");
-}
-.footer-icon-linkedin {
-	background-image: url("../images/linkedin-2.svg");
+	justify-content: center;
+	align-items: center;
 }
 
 .footer-socials-item + .footer-socials-item {
 	margin-left: 10px;
+}
+.icon-footer {
+	height: 20px;
+	fill: var(--primary-white-color);
 }
 
 .footer-socials-link:hover,
@@ -508,7 +520,7 @@ p {
 	width: 570px;
 }
 
-.footer-copyright-text {
+/* .footer-copyright-text {
 	text-align: center;
 	padding-top: 21px;
 	padding-bottom: 18px;
@@ -517,7 +529,7 @@ p {
 	font-size: 12px;
 	line-height: 2;
 	color: rgba(255, 255, 255, 0.4);
-}
+} */
 
 /* Страница портфолио */
 
@@ -549,6 +561,7 @@ p {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.62;
+	cursor: pointer;
 }
 .button:hover,
 .button:focus {
@@ -569,7 +582,6 @@ p {
 	border: 1px solid #eeeeee;
 
 	width: calc((100% - 30px * 2) / 3);
-	/* width: 370px; */
 }
 
 .portfolio-list-item:nth-child(3n) {
@@ -601,6 +613,7 @@ p {
 
 .portfolio-list-text {
 	padding-left: 24px;
+	margin-bottom: 20px;
 
 	line-height: 1.87;
 	font-size: 16px;
