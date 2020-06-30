@@ -138,12 +138,13 @@ p {
 	height: 15px;
 	width: 20px;
 }
-.icon-address-header:hover {
-	fill: var(--accent-color);
-}
+
 .contact-address:hover,
 .contact-address:focus {
 	color: var(--accent-color);
+}
+.contact-address:hover svg {
+	fill: var(--accent-color);
 }
 
 /* главный баннер */
@@ -375,12 +376,13 @@ p {
 .socials-item-link:focus {
 	background-color: var(--accent-color);
 }
+.socials-item-link:hover svg {
+	fill: var(--primary-white-color);
+}
+
 .icon-socials-team {
 	height: 20px;
 	fill: var(--primary-text-color);
-}
-.icon-socials-team:hover {
-	fill: var(--primary-white-color);
 }
 
 /* Клиенты */
@@ -398,28 +400,32 @@ p {
 }
 .clients-list-item {
 	display: flex;
-	justify-content: center;
 
 	width: calc((100% - 30px * 5) / 6);
 	height: 90px;
-	border: 1px solid #afb1b8;
-	box-sizing: border-box;
-	align-items: center;
-	border-radius: 4px;
 }
 .clients-list-item + .clients-list-item {
 	margin-left: 30px;
 }
 
-.clients-list-item:hover {
+.clients-list-link {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #afb1b8;
+	box-sizing: border-box;
+	align-items: center;
+	border-radius: 4px;
+}
+.clients-list-link:hover {
 	border: 1px solid var(--accent-color);
 }
-
+.clients-list-link:hover svg {
+	fill: var(--accent-color);
+}
 .icon-clients {
 	fill: #afb1b8;
-}
-.icon-clients:hover {
-	fill: var(--accent-color);
 }
 
 /* футтер */
@@ -561,11 +567,16 @@ p {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.62;
+	border: none;
+	outline: none;
+	background: #f5f4fa;
+	border-radius: 4px;
 	cursor: pointer;
 }
 .button:hover,
 .button:focus {
 	background-color: var(--accent-color);
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
 	color: var(--primary-white-color);
 }
 
@@ -595,7 +606,7 @@ p {
 .portfolio-list-item:nth-last-child(-n + 3) {
 	margin-bottom: 0px;
 }
-.portfolio-list-image {
+.portfolio-inner {
 	margin-bottom: 20px;
 }
 .portfolio-list-title {
